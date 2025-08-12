@@ -1,2 +1,2 @@
-# Cursada_Alg2_repo
-Programas de Cursada de Algoritmo y Estructura de Datos 2
+# Algoritmo y Estructura de Datos II
+Lista de Proyectos de algoritmo. Practicas
