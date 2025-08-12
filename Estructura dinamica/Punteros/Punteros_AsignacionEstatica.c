@@ -1,21 +1,30 @@
 #include <stdio.h>
-/* ASIGNACIÓN ESTÁTICA */
+/* ASIGNACION ESTATICA */
 
-/* Declaración de tipos de datos personalizados */
+/*
+Estructuras de datos estudiadase almacenan estÃ¡ticamente en la memoria fÃ­sica del computador. â€‹
+Esta rigidez  en las  estructuras de datos estÃ¡ticas hace que no pueden crecer o menguar durante la ejecuciÃ³n de un programa.â€‹
+La representaciÃ³n de ciertas construcciones (como las listas) usando las estructuras conocidas (arrays) tiene que hacerse situando elementos consecutivos en componentes contiguas, 
+de manera que las operaciones de inserciÃ³n de un elemento nuevo o desapariciÃ³n de uno ya existente requieren el desplazamiento de todos los posteriores para cubrir el vacÃ­o producido, 
+o para abrir espacio para el nuevo.â€‹
+â€‹*/
 
-/* Declaración de prototipos de funciones */
+
+/* Declaraciï¿½n de tipos de datos personalizados */
+
+/* Declaraciï¿½n de prototipos de funciones */
 void ejPunteroFloat();
 
-/* Declaración de variables globales */
+/* Declaraciï¿½n de variables globales */
 
 
-/* Función principal */
+/* Funciï¿½n principal */
 int main() {
 	ejPunteroFloat();
 	return 0;
 }
 
-/* Implemetación de funciones */
+/* Implemetaciï¿½n de funciones */
 void ejPunteroFloat() {
 	float nroReal = 10;
 	
