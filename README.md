@@ -11,6 +11,8 @@ Lista de Proyectos de algoritmo. Guasa
 - Pilas y Colas
 - Grafos
 - Recursividad
+
+fuentes: https://www.w3schools.com/c/index.php
 ## PDF
 
  - [Estructura Dinamica I](https://github.com/ryanzgab/Cursada_Alg2_repo/blob/main/Apuntes%20PDF/Tema%201_ESTRUCTURAS%20DINAMICAS.pdf)
