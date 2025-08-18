@@ -2,18 +2,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-void tipoChar();
+void tipoFloat();
 
 int main()
 {
-    tipoChar();
+    tipoFloat();
     return 0;
 }
 
-void tipoChar()
+void tipoFloat()
 {
-    char *pChar;
-    pChar = (char *)malloc(sizeof(char));
+    Float *pFloat;
+    pFloat = (Float *)malloc(sizeof(Float));
 
     printf("Contenido del puntero: %p\n", pChar);
 
