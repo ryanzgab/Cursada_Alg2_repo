@@ -18,7 +18,7 @@ int main()
     printf("b). %p\n", apuntCC);
     printf("c). %d\n", c);
     printf("d). %d\n", cc);
-    printf("e). %d\n", *apuntC); /*"Causa Fallos Al Copilar"*/
-    printf("f). %d\n", *apuntCC); /*"Causa Fallos Al Copilar"*/
+    /*printf("e). %d\n", *apuntC); Error Al Copilar, Al solo estar en NULL */
+    printf("f). %d\n", *apuntCC);
     return 0;
 }
