@@ -4,9 +4,9 @@
 
 #define MAXCAD 25
 
-/* ASIGNACI”N DIN¡MICA */
+/* ASIGNACIÔøΩN DINÔøΩMICA */
 
-/* DeclaraciÛn de tipos de datos personalizados */
+/* DeclaraciÔøΩn de tipos de datos personalizados */
 typedef char tString[MAXCAD];
 
 typedef struct {
@@ -15,15 +15,15 @@ typedef struct {
 	tString nombre;
 }tEstudiante;
 
-/* DeclaraciÛn de prototipos de funciones */
+/* DeclaraciÔøΩn de prototipos de funciones */
 void ejPunteroFloat();
 void ejPunteroChar();
 void ejPunteroStruct();
 
-/* DeclaraciÛn de variables globales */
+/* DeclaraciÔøΩn de variables globales */
 
 
-/* FunciÛn principal */
+/* FunciÔøΩn principal */
 int main() {
 	ejPunteroStruct();
 	// ejPunteroChar();
@@ -31,7 +31,7 @@ int main() {
 	return 0;
 }
 
-/* ImplemetaciÛn de funciones */
+/* ImplemetaciÔøΩn de funciones */
 void ejPunteroFloat() {
 	// Se declara la variable puntero
 	float * apValorReal;
@@ -74,3 +74,15 @@ void ejPunteroStruct() {
 			apEstudiante->nombre );
 }
 
+
+
+
+/*Las direcciones de memoria se pueden escribir de distintas formas, pero todas representan valores num√©ricos que
+indican ubicaciones en la memoria RAM. Algunas formas comunes de representarlas:
+0050, 001A, 0125: Son n√∫meros en base 16 (hexadecimal), pero sin el prefijo.
+0x4000: Es la forma est√°ndar en C para escribir un n√∫mero en hexadecimal. El prefijo 0x indica que el valor est√° en
+base 16.
+Las direcciones que se imprimen con %p en la consola como 0x7ffeeaa30458, representan direcciones reales en la
+computadora al ejecutar el programa.
+¬øPor qu√© utilizar el sistemas hexadecimal? Porque es una forma m√°s compacta y legible de representar direcciones
+binarias. Cada d√≠gito hexadecimal representa 4 bits.*/
