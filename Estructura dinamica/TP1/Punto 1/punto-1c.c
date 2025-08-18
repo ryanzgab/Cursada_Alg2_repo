@@ -12,12 +12,12 @@ int main()
 
 void tipoFloat()
 {
-    Float *pFloat;
-    pFloat = (Float *)malloc(sizeof(Float));
+    float *pFloat;
+    pFloat = (float *)malloc(sizeof(float));
 
-    printf("Contenido del puntero: %p\n", pChar);
+    printf("Contenido del puntero: %p\n", pFloat);
 
-    *pChar= 'A';
-    printf("Contenido de la variable referida por el puntero: %c\n", *pChar);
-	free(pChar);
+    *pFloat= 3.14;
+    printf("Contenido de la variable referida por el puntero: %.2f\n", *pFloat);
+	free(pFloat);
 }
