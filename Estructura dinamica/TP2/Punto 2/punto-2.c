@@ -1,6 +1,22 @@
+/*
+2. Modificar el ejercicio 1 para implementar todas las operaciones básicas de una lista enlazada: 
+a) Inicializar la lista (establecer puntero en NULL). 
+b) Verificar si una lista está vacía. 
+c) Insertar el primer videojuego (nodo) de la lista. 
+d) Insertar un videojuego al principio de la lista. 
+e) Insertar un videojuego en una posición específica. 
+f) Eliminar el primer videojuego de la lista. 
+g) Eliminar un videojuego de una posición específica. 
+h) Buscar un videojuego por ID y retornar su posición. 
+i) Visualizar todos los videojuegos de la lista. 
+j) Contar la cantidad total de videojuegos.
+k) Liberar completamente la memoria de la lista.Crear un menú principal que permita probar todas estas funciones. 
+*Plus: Insertar un videojuego al final de la lista. 
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool>
 
 #define MAXCARD 50
 typedef char tstring[MAXCARD];
@@ -26,6 +42,9 @@ typedef struct Nodo
 tListavideojuegos* crearNodo();
 
 /*Prototipos*/
+
+bool listaVacia(tListavideojuegos*)
+void inicializarLista(tListavideojuegos**)
 void mostrarDatosNodo(tListavideojuegos* );
 void liberarMemoria(tListavideojuegos**);
 
@@ -77,6 +96,11 @@ void liberarMemoria(tListavideojuegos** Nodo)
     free(*Nodo);
     *Nodo = NULL;
     printf("\nSoy el ASSassins creed de una negra que libera\n");
+}
+
+bool listaVacia(tDatovideojuego * pLista)
+{
+    return (pLista == NULL);
 }
 
 /*inicio*/
