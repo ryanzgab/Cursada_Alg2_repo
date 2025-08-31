@@ -16,7 +16,7 @@ k) Liberar completamente la memoria de la lista.Crear un menú principal que per
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool>
+#include <stdbool.h>
 
 #define MAXCARD 50
 typedef char tstring[MAXCARD];
@@ -43,8 +43,8 @@ tListavideojuegos* crearNodo();
 
 /*Prototipos*/
 
-bool listaVacia(tListavideojuegos*)
-void inicializarLista(tListavideojuegos**)
+bool listaVacia(tListavideojuegos*);
+void inicializarLista(tListavideojuegos**);
 void mostrarDatosNodo(tListavideojuegos* );
 void liberarMemoria(tListavideojuegos**);
 
