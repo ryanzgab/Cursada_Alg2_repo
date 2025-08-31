@@ -48,6 +48,13 @@ void inicializarLista(tListavideojuegos**);
 void mostrarDatosNodo(tListavideojuegos* );
 void liberarMemoria(tListavideojuegos**);
 
+
+bool listaVacia(tListavideojuegos *pLista)
+{
+    return (pLista == NULL);
+}
+
+
 /*NODO*/
 
 tListavideojuegos* crearNodo()
@@ -98,10 +105,7 @@ void liberarMemoria(tListavideojuegos** Nodo)
     printf("\nSoy el ASSassins creed de una negra que libera\n");
 }
 
-bool listaVacia(tDatovideojuego * pLista)
-{
-    return (pLista == NULL);
-}
+
 
 /*inicio*/
 int main()

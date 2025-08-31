@@ -7,12 +7,8 @@
 
 typedef char tString[MAXCARD];
 
-typdef struct
+typedef struct
 {
     float hora;
-    tString urlSitio; 
-}tSitio;
-
-typedef struct nodo
-{
-}tPilaSitio;
+    
+}
