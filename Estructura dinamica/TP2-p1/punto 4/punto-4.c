@@ -174,6 +174,15 @@ void mostrarDatosPedido(tPedido pPedido)
     printf("-Direccion del Cliente: %s\n", pPedido.direccionCliente);
     printf("-Telefono(+54): %s\n", pPedido.telfCliente);
     printf("-Monto del Pedido: %.2f\n", pPedido.montoTotal);
+    
+    if(pPedido.montoTotal > 3000)
+    {
+        printf("--Coste del Envio: $500");
+    }
+    if(pPedido.montoTotal <= 3000)
+    {
+        printf("--ENVIO GRATIS\n");
+    }
     printf("-Estado del Pedido: %s\n", pPedido.estadoPedido);
 }
 
