@@ -95,15 +95,18 @@ bool listaVacia(tListaPedido* pListaPedido)
     return (pListaPedido == NULL);
 }
 
+
+
+
 tPedido ingresarPedido()
 {
     tPedido pedido;
     printf("-N°de pedido: ");
-    scanf("%d",&pedido.numPedido);
+    scanf("%d",&pedido.numPedido); /*En Caso de que sea Entero o Flotante se usa el "&" antes de agregar la variable de la estructura*/
     
     fflush(stdin);
     printf("-Nombre del Cliente: ");
-    scanf("%[^\n]",pedido.nameCliente);
+    scanf("%[^\n]",pedido.nameCliente); /*En caso de ser Cadena de caracteres no se utiliza "&"*/
     
     fflush(stdin);
     printf("-Direccion del Cliente: ");
@@ -170,7 +173,7 @@ void mostrarDatosPedido(tPedido pPedido)
     printf("-Nombre del Cliente: %s\n",pPedido.nameCliente);
     printf("-Direccion del Cliente: %s\n", pPedido.direccionCliente);
     printf("-Telefono(+54): %s\n", pPedido.telfCliente);
-    printf("-Monto del Pedido: %2.f\n", pPedido.montoTotal);
+    printf("-Monto del Pedido: %.2f\n", pPedido.montoTotal);
     printf("-Estado del Pedido: %s\n", pPedido.estadoPedido);
 }
 
