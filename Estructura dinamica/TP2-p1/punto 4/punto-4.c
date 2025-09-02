@@ -99,28 +99,27 @@ tPedido ingresarPedido()
 {
     tPedido pedido;
     printf("-N°de pedido: ");
-    fflush(stdin);
-    scanf("%d", &pedido.numPedido);
+    scanf("%d",&pedido.numPedido);
     
+    fflush(stdin);
     printf("-Nombre del Cliente: ");
-    fflush(stdin);
-    scanf("%[^\n]",&pedido.nameCliente);
+    scanf("%[^\n]",pedido.nameCliente);
     
+    fflush(stdin);
     printf("-Direccion del Cliente: ");
+    scanf("%[^\n]",pedido.direccionCliente);
+
     fflush(stdin);
-    scanf("%[^\n]",&pedido.direccionCliente);
-    
     printf("-Telefono(+54): ");
-    fflush(stdin);
-    scanf("%[^\n]",&pedido.telfCliente);
+    scanf("%[^\n]",pedido.telfCliente);
     
+    fflush(stdin);    
     printf("-Monto del Pedido: ");
-    fflush(stdin);
     scanf("%f",&pedido.montoTotal);
-    
+
+    fflush(stdin);    
     printf("-Estado del Pedido: ");
-    fflush(stdin);
-    scanf("%[^\n]",&pedido.estadoPedido);
+    scanf("%[^\n]",pedido.estadoPedido);
 
     return pedido;
 }
