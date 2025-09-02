@@ -47,7 +47,9 @@ typedef struct nodo
 
 
 tPedido ingresarPedido();
-void AnalizarEstadoPedido();
+void AnalizarEstadoPedido(tPedido);
+void AnalizarPrioridad(tPedido);
+void VerificarCosteEnvio(tPedido);
 
 void inicializarLista(tListaPedido**);
 void insertarPedido(tListaPedido**,tPedido);
@@ -123,10 +125,31 @@ tPedido ingresarPedido()
     fflush(stdin);    
     printf("-Estado del Pedido: ");
     scanf("%[^\n]",pedido.estadoPedido);
-
+    AnalizarEstadoPedido(pedido);
     return pedido;
 }
 
+void AnalizarEstadoPedido(tPedido pPedido)
+{
+    if(strcmp(pPedido.estadoPedido, "Preparando")== 0 || strcmp(pPedido.estadoPedido, "Pendiente")== 0 || strcmp(pPedido.estadoPedido, "En camino")== 0)
+    {
+        fflush(stdin);    
+        printf("-Tiempo Estimado:");
+        scanf("%d",&pPedido.tiempEstimado);
+        
+    }
+}
+
+void AnalizarPrioridad(tPedido pPedido)
+{
+    if(pPedido.montoTotal > 5000)
+    {
+        printf("  ALTA\n\n");
+    }else
+    {
+        printf("  Normal\n\n");
+    }
+}
 
 
 void insertarPedido(tListaPedido** pListaPedido, tPedido pPedido)
@@ -169,22 +192,29 @@ void insertarPedidoalPrincipio(tListaPedido** pListaPedido, tPedido pPedido)
 
 void mostrarDatosPedido(tPedido pPedido)
 {
+    printf("**PRIORIDAD**\n");
+    AnalizarPrioridad(pPedido);
     printf("-N°de pedido: %d\n",pPedido.numPedido);
     printf("-Nombre del Cliente: %s\n",pPedido.nameCliente);
     printf("-Direccion del Cliente: %s\n", pPedido.direccionCliente);
     printf("-Telefono(+54): %s\n", pPedido.telfCliente);
     printf("-Monto del Pedido: %.2f\n", pPedido.montoTotal);
-    
-    if(pPedido.montoTotal > 3000)
+    VerificarCosteEnvio(pPedido);
+    printf("-Estado del Pedido: %s\n", pPedido.estadoPedido);
+}
+
+void VerificarCosteEnvio(tPedido pPedido)
+{
+    if(pPedido.montoTotal < 3000)
     {
-        printf("--Coste del Envio: $500");
-    }
-    if(pPedido.montoTotal <= 3000)
+        printf("--Coste del Envio: $500\n");
+    }else
     {
         printf("--ENVIO GRATIS\n");
     }
-    printf("-Estado del Pedido: %s\n", pPedido.estadoPedido);
 }
+
+
 
 void mostrarListaPedido(tListaPedido* pListaPedido)
 {
