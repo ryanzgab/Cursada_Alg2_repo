@@ -12,8 +12,8 @@ void mostrarInvertido(int n) {
     if (n == 0)  // caso base
         return;
 
-    printf("%d", n % 10);   // imprimir último dígito
-    mostrarInvertido(n / 10); // llamada recursiva con el número reducido
+    printf("%d", n % 10);   /*imprimir último dígito*/
+    mostrarInvertido(n / 10); /*llamada recursiva con el número reducido*/
 }
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
 
     printf("Numero invertido: ");
     if (numero == 0) {
-        printf("0"); // caso especial si el usuario ingresa 0
+        printf("0"); /*si se ingresa 0*/
     } else {
         mostrarInvertido(numero);
     }
