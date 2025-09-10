@@ -46,6 +46,7 @@ typedef struct nodo{
 
 void menu(tPilaSitiosWeb**);
 void horaActual();
+tInfoSitioWeb ingresarUrl();
 
 void inicializarPila(tPilaSitiosWeb**);
 bool pilaVacia(tPilaSitiosWeb*);
@@ -103,14 +104,7 @@ void menu(tPilaSitiosWeb** pPilaSitioWeb)
                     case 0:
                         //Prueba de nuevo sistema
                         system("cls");
-                        tInfoSitioWeb sitioWeb;
-                        fflush(stdin);
-                        printf("Ingrese url del sitio web: ");
-                        scanf("%[^\n]", sitioWeb.urlSitio);
-
-                        sitioWeb.hora = tiempo->tm_hour;
-                        sitioWeb.min = tiempo->tm_min;
-                        analizarTipoSitio(&sitioWeb);
+                        tInfoSitioWeb sitioWeb = ingresarUrl();
                         apilarPila(pPilaSitioWeb, &sitioWeb);
                         
                         break;
@@ -133,6 +127,20 @@ void menu(tPilaSitiosWeb** pPilaSitioWeb)
         }
 
     }
+}
+
+
+tInfoSitioWeb ingresarUrl()
+{
+    tInfoSitioWeb sitioWeb;
+    fflush(stdin);
+    printf("Ingrese url del sitio web: ");
+    scanf("%[^\n]", sitioWeb.urlSitio);
+
+    sitioWeb.hora = tiempo->tm_hour;
+    sitioWeb.min = tiempo->tm_min;
+    analizarTipoSitio(&sitioWeb);
+    return sitioWeb;                 
 }
 
 void horaActual()
