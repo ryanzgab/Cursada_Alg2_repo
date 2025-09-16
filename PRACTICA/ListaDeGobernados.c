@@ -132,7 +132,7 @@ void listarUsuarios(tListaUsuarios* pListaUsuarios, int cantSeguidores){
               if(aux->usuario, cantSeguidores){
                 printf("\n-----------------------------------------------------\n");
                 encontrado = true;
-                printf("%s" aux->usuario.correoE);
+                printf("%s", aux->usuario.correoE);
               }
               aux= aux->siguiente;
            }
