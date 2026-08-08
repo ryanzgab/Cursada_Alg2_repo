@@ -10,38 +10,31 @@ el número más grande del arreglo.
 #define MAX 5
 
 
-int vNum[];
+typedef int vNum[];
 
 /*Funcion Recursiva por parametro*/
-void numeroMayor(int pNum[], int n)
+int numeroMayorRec(vNum pNum, int n)
 {
-    int numMayor = pNum[0];
-    int i;
-    for(i=1;i<MAX;i++)
+    if(n == 1)
     {
-        printf("ingrese un numero: ");
-        fflush(stdin);
-        scanf("%d",&pNum[i]);
+        return pNum[0];
     }
-
-    for (i = 1; i < n; i++)
+    int mayorPrevio = numeroMayorRec(pNum, n-1);
+    if(pNum[n-1]> mayorPrevio)
     {
-        if(vNum[i]>numMayor) /*CASO BASE*/
-        {
-            numMayor=pNum[i];
-        }
-    }
-    printf("num Mayor: %d\n",numMayor);
-
-    if(pNum[i] == pNum[MAX])    /*CASO RECURSIVO*/
+        return pNum[n-1];
+    }else
     {
-        numeroMayor(pNum,n);
+        return mayorPrevio;
     }
 }
 
 int main()
 {
-    numeroMayor(vNum,MAX);
+    vNum numeros ={20,12,3,45,90};
+    numeroMayorRec(numeros,5);
     return 0;
 }
+
+
 
