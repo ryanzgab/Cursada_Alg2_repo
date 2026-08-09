@@ -1,6 +1,6 @@
 /*4. Escribir un programa que permita ingresar un número entero positivo y luego, mediante una
 función recursiva, muestre el número de forma invertida. Ej.: 123 - 321.
- Pista: Para invertir un número, se puede usar el principio de extraer dígitos
+Pista: Para invertir un número, se puede usar el principio de extraer dígitos
 mediante divisiones sucesivas por 10: el último dígito se obtiene con numero % 10
 (resto de la división por 10), y el número sin ese último dígito se obtiene con
 numero / 10 (cociente de la división por 10). En la función recursiva, cada llamada
