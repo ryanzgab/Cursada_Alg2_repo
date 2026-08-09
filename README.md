@@ -2,7 +2,15 @@
 # Algoritmo y Estructura de Datos II
 
 Lista de Proyectos de algoritmo. Guasa
+te chupo bien el culo. Re guarango era. 
+hola. 
+que haces leyendo esto flaco.
+anda a estudiar.
 
+seguís acá ?.
+bueno, ahí llamo unos trabas que iban a venir hoy a la tarde...
+
+Atte. Vallejos
 
 ## Temas 
 
