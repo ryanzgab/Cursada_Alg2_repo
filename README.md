@@ -23,7 +23,7 @@ Atte. Vallejos
 fuentes: https://www.w3schools.com/c/index.php
 ## Trabajos Practicos
 
- - [TP1](https://github.com/ryanzgab/Cursada_Alg2_repo/blob/main/Apuntes%20PDF/Tema%201_ESTRUCTURAS%20DINAMICAS.pdf)
+ - [Trabajo Practico(PUNTEROS) 1](https://github.com/ryanzgab/Cursada_Alg2_repo/tree/main/AEDII/TP1)
 
 
 ## Authors
