@@ -9,18 +9,14 @@
 /*
 - NOM. PROGRAMA: Punto-1-(d).c
 - NOM. ALUMNO: Medina Juan Gabriel
-- DESCRIPCION: Escribir un programa en C que implemente las situaciones anteriores, mostrando en la consola las direcciones de memoria y los valores del dato antes y después 
-de la modificación de cada una de las variables que intervienen. Utilizar asignación estática y dinámica (malloc). 
+- DESCRIPCION: Programa que pone en practica los items anteriores, con el añadido del (Malloc) asignacion de memoria por cada
+tipo de dato. De los puntos: A, B, C.
 - REVISION: [NINGUNA]
 */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int data;
-char caracter;
-float flotante;
 
 void casoA();
 void casoB();
@@ -28,52 +24,49 @@ void casoC();
 
 
 int main()
-{
+{   
+    casoA();
     casoB();
+    casoC();
     return 0;
 }
 
 void casoA()
 {
-    int* ApData;
-    ApData = (int*)malloc(sizeof(int)); /*Asignacion de memoria*/
-
-    data = 10;
-    ApData = &data;
+    int* ApInt;
+    ApInt = malloc(sizeof(int)); /*Asignacion de memoria*/
 
 
-    printf("Direccion de memoria de puntero es:%p \n", &ApData);
-    printf("Contenido de mi variable puntero: %p \n", ApData);
-    printf("Direccion de la Variable Data: %p\n", &data);
-    printf("El valor entero es: %d \n", *ApData);
+    printf("Contenido del puntero: %p\n", ApInt);
+
+    *ApInt= 10;
+    printf("Contenido de la variable referida por el puntero: %d\n", *ApInt);
+	free(ApInt);
+    printf("\n");
 }
 
 void casoB()
 {
-    char* ApData;
-    ApData = (char*)malloc(sizeof(char)); /*Asignacion de memoria*/
+    char* ApChar;
+    ApChar = malloc(sizeof(char)); /*Asignacion de memoria*/
 
-    caracter = 'A';
-    ApData = &caracter;
+    printf("Contenido del puntero: %p\n", ApChar);
 
-
-    printf("Direccion de memoria de puntero es:%p \n", &ApData);
-    printf("Contenido de mi variable puntero: %p \n", ApData);
-    printf("Direccion de la Variable Data: %p\n", &caracter);
-    printf("El valor entero es: %c \n", *ApData);
+    *ApChar= 'A';
+    printf("Contenido de la variable referida por el puntero: %c\n", *ApChar);
+	free(ApChar);
+    printf("\n");
 }
 
 void casoC()
 {
-    float* ApData;
-    ApData = (float*)malloc(sizeof(float)); /*Asignacion de memoria*/
+    float* ApFloat;
+    ApFloat = malloc(sizeof(float)); /*Asignacion de memoria*/
 
-    flotante = 'A';
-    ApData = &;
+    printf("Contenido del puntero: %p\n", ApFloat);
 
-
-    printf("Direccion de memoria de puntero es:%p \n", &ApData);
-    printf("Contenido de mi variable puntero: %p \n", ApData);
-    printf("Direccion de la Variable Data: %p\n", &caracter);
-    printf("El valor entero es: %c \n", *ApData);
+    *ApFloat= 3.14;
+    printf("Contenido de la variable referida por el puntero: %.2f\n", *ApFloat);
+	free(ApFloat);
+    printf("\n");
 }
