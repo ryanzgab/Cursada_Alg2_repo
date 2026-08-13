@@ -21,10 +21,9 @@ Atte. Vallejos
 - Recursividad
 
 fuentes: https://www.w3schools.com/c/index.php
-## PDF
+## Trabajos Practicos
 
- - [Estructura Dinamica I](https://github.com/ryanzgab/Cursada_Alg2_repo/blob/main/Apuntes%20PDF/Tema%201_ESTRUCTURAS%20DINAMICAS.pdf)
- - [Estrucutra Dinamica II](https://github.com/ryanzgab/Cursada_Alg2_repo/blob/main/Apuntes%20PDF/Tema%202_ESTRUCTURAS%20DINAMICAS_no%20lineales.pdf)
+ - [TP1](https://github.com/ryanzgab/Cursada_Alg2_repo/blob/main/Apuntes%20PDF/Tema%201_ESTRUCTURAS%20DINAMICAS.pdf)
 
 
 ## Authors
