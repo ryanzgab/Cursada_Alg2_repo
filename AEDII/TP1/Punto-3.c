@@ -1,18 +1,17 @@
 /*
- ███  █████ ████  ███ ███            ████  █   █ █   █ █████ █████ ████   ███   ████ 
-█   █ █     █   █  █   █             █   █ █   █ ██  █   █   █     █   █ █   █ █     
-█████ ████  █   █  █   █     ████    ████  █   █ █ █ █   █   ████  ████  █   █  ███  
-█   █ █     █   █  █   █             █     █   █ █  ██   █   █     █  █  █   █     █ 
-█   █ █████ ████  ███ ███            █      ███  █   █   █   █████ █   █  ███  ████  
+################################## 
+#             AEDII              # 
+# Trabajo Practico #1 - Punteros # 
+################################## 
+
+- #NOM. PROGRAMA: Punto-3.c
+- #NOM. ALUMNO: Medina Juan Gabriel
+- #DESCRIPCION: Programa con una similitud con el punto anterior pero en cambio, se maneja con una estructura de int 
+y char. Con el agregado de un puntero adicional que apunte a la estructura y la modifica en cada campo.
+- #REVISION: [Ninguna]
+
 */
 
-/*
-- NOM. PROGRAMA: Punto-3.c
-- NOM. ALUMNO: Medina Juan Gabriel
-- DESCRIPCION: Programa con una similitud con el punto anterior pero en cambio, se maneja con una estructura de int 
-y char. Con el agregado de un puntero adicional que apunte a la estructura y la modifica en cada campo.
-- REVISION: [NINGUNA]
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,19 +1,16 @@
 /*
- ███  █████ ████  ███ ███            ████  █   █ █   █ █████ █████ ████   ███   ████ 
-█   █ █     █   █  █   █             █   █ █   █ ██  █   █   █     █   █ █   █ █     
-█████ ████  █   █  █   █     ████    ████  █   █ █ █ █   █   ████  ████  █   █  ███  
-█   █ █     █   █  █   █             █     █   █ █  ██   █   █     █  █  █   █     █ 
-█   █ █████ ████  ███ ███            █      ███  █   █   █   █████ █   █  ███  ████  
-*/
+################################## 
+#             AEDII              # 
+# Trabajo Practico #1 - Punteros # 
+################################## 
 
-/*
-- NOM. PROGRAMA: Punto-1-(d).c
-- NOM. ALUMNO: Medina Juan Gabriel
-- DESCRIPCION: Programa que pone en practica los items anteriores, con el añadido del (Malloc) asignacion de memoria por cada
+- #NOM. PROGRAMA: Punto-1-(d).c
+- #NOM. ALUMNO: Medina Juan Gabriel
+- #DESCRIPCION: Programa que pone en practica los items anteriores, con el añadido del (Malloc) asignacion de memoria por cada
 tipo de dato. De los puntos: A, B, C.
-- REVISION: [NINGUNA]
-*/
+- #REVISION: [NINGUNA]
 
+*/
 #include <stdio.h>
 #include <stdlib.h>
 

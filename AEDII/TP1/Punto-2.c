@@ -1,19 +1,16 @@
 /*
- ███  █████ ████  ███ ███            ████  █   █ █   █ █████ █████ ████   ███   ████ 
-█   █ █     █   █  █   █             █   █ █   █ ██  █   █   █     █   █ █   █ █     
-█████ ████  █   █  █   █     ████    ████  █   █ █ █ █   █   ████  ████  █   █  ███  
-█   █ █     █   █  █   █             █     █   █ █  ██   █   █     █  █  █   █     █ 
-█   █ █████ ████  ███ ███            █      ███  █   █   █   █████ █   █  ███  ████  
-*/
+################################## 
+#             AEDII              # 
+# Trabajo Practico #1 - Punteros # 
+################################## 
 
-/*
-- NOM. PROGRAMA: Punto-2.c
-- NOM. ALUMNO: Medina Juan Gabriel
-- DESCRIPCION: Programa capaz de mostrar, atravez de una impresion de pantalla la direccion de memoria de una variable de 
+- #NOM. PROGRAMA: Punto-2.c
+- #NOM. ALUMNO: Medina Juan Gabriel
+- #DESCRIPCION: Programa capaz de mostrar, atravez de una impresion de pantalla la direccion de memoria de una variable de 
 tipo string, como tambien la direccion del puntero, a la que apunta. Y por ultimo su contenido apuntado. 
-- REVISION: [NINGUNA]
-*/
+- #REVISION: [NINGUNA]
 
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

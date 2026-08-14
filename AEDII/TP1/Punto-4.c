@@ -1,17 +1,14 @@
-/* ################################################################# */
-/* #   ____                  __                                    # */
-/* #  /\  _`\               /\ \__                                 # */
-/* #  \ \ \L\ \__  __    ___\ \ ,_\    __   _ __   ___     ____    # */
-/* #   \ \ ,__/\ \/\ \ /' _ `\ \ \/  /'__`\/\`'__\/ __`\  /',__\   # */
-/* #    \ \ \/\ \ \_\ \/\ \/\ \ \ \_/\  __/\ \ \//\ \L\ \/\__, `\  # */
-/* #     \ \_\ \ \____/\ \_\ \_\ \__\ \____\\ \_\\ \____/\/\____/  # */
-/* #      \/_/  \/___/  \/_/\/_/\/__/\/____/ \/_/ \/___/  \/___/   # */
-/* ################################################################# */
 /*
-- NOM. PROGRAMA: Punto-3.c
-- NOM. ALUMNO: Medina Juan Gabriel
-- DESCRIPCION: No es un programa, es un analisis de un codigo.
-- REVISION: [NINGUNA]
+################################## 
+#             AEDII              # 
+# Trabajo Practico #1 - Punteros # 
+################################## 
+
+- #NOM. PROGRAMA: Punto-4.c
+- #NOM. ALUMNO: Medina Juan Gabriel
+- #DESCRIPCION: Analisis de programa y cuestionario
+- #REVISION: [Ninguna]
+
 */
 
 #include <stdio.h>
