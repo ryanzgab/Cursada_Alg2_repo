@@ -14,7 +14,7 @@ void contarParesImpares(int vector[], int cantidad);
 
 int main(){
 
-    setlocale(LC_CTYPE, "Spanish"); //Sirve para poner Ã±, Ã³, etc.
+    setlocale(LC_CTYPE, "Spanish"); //Sirve para poner ñ, ó, etc.
 
     int vectorEnteros[MAX];
     int cantidad, suma, mayor, menor;
@@ -34,8 +34,8 @@ int main(){
     printf("\n--- RESULTADOS ---\n");
     printf("La suma de todos los elementos es: %d\n", suma);
     printf("El promedio de los valores es: %.2f\n", promedio);
-    printf("El mayor elemento del vector es: %d\n");
-    printf("El menor elemento del vector es: %d\n");
+    printf("El mayor elemento del vector es: %d\n", mayor);
+    printf("El menor elemento del vector es: %d\n", menor);
 
     contarParesImpares(vectorEnteros, cantidad);
 
@@ -49,7 +49,8 @@ int solicitarCantidad(){
         scanf("%d", &cantidad);
 
         if(cantidad < 1 || cantidad > MAX){
-            printf("Error: La cantidad ingresada no es valida. Intente nuevamente.\n");
+            printf("¡Error! La cantidad ingresada no es válida. Intente nuevamente.\n");
+            fflush(stdin);
           }
     } while (cantidad < 1 || cantidad > MAX);
 
@@ -60,7 +61,7 @@ void cargarVector(int vector[], int cantidad){
     int i;
     printf("\n--- CARGA DE DATOS ---\n");
     for (i=0; i<cantidad; i++){
-        printf("Ingrese el valor para la posicion %d: ", i+1);
+        printf("Ingrese el valor para la posición %d: ", i+1);
         scanf("%d", &vector[i]);
     }
 }
@@ -69,7 +70,11 @@ void mostrarVector(int vector[], int cantidad){
     int i;
     printf("\n--- ELEMENTOS DEL VECTOR ---\n");
     for (i = 0; i < cantidad; i++){
-        printf("%d", vector[i]);
+    	if(i==cantidad-1){
+    		printf("y %d.", vector[i]);
+    	}else{
+    		printf("%d, ", vector[i]);
+    	}
     }
     printf("\n");
 }
@@ -122,6 +127,7 @@ void contarParesImpares(int vector[], int cantidad){
             impares++;
         }
     }
-    printf("Cantidad de numeros pares: %d\n", pares);
-    printf("Cantidad de numeros impares: %d\n", impares);
+    printf("Cantidad de números pares: %d\n", pares);
+    printf("Cantidad de números impares: %d\n", impares);
 }
+
