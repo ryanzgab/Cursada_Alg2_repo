@@ -40,6 +40,8 @@ void casoA()
     printf("Direccion de memoria de puntero es:%p \n", &puntero);
     printf("Contenido de mi variable puntero: %p \n", puntero);
     printf("El nombre de la persona es: %s \n", *puntero);
+free(puntero)
+
     printf("\n");
 }
 
