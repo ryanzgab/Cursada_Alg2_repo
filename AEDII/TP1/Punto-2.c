@@ -9,7 +9,6 @@
 - #DESCRIPCION: Programa capaz de mostrar, atravez de una impresion de pantalla la direccion de memoria de una variable de 
 tipo string, como tambien la direccion del puntero, a la que apunta. Y por ultimo su contenido apuntado. 
 - #REVISION: [NINGUNA]
-
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,7 +23,7 @@ void casoB();
 int main()
 {
 	casoA();
-    casoB();
+    /*casoB();*/
 
     return 0;
 };
@@ -44,8 +43,8 @@ void casoA()
 
     printf("\n");
 }
-
-void casoB() /*Se remite un caso secundario indicado en la actividad de quitar el malloc y tipearlo de otra forma*/
+/*Se remite un caso secundario indicado en la actividad de quitar el malloc y tipearlo de otra forma*/
+void casoB() 
 {
 	t_String *puntero = "Anastacia"; /*NOTA: En mi caso, sale una advertencia de que la inicializacion es incompatible...*/
 	

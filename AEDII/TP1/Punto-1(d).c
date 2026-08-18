@@ -9,7 +9,6 @@
 - #DESCRIPCION: Programa que pone en practica los items anteriores, con el añadido del (Malloc) asignacion de memoria por cada
 tipo de dato. De los puntos: A, B, C.
 - #REVISION: [NINGUNA]
-
 */
 #include <stdio.h>
 #include <stdlib.h>

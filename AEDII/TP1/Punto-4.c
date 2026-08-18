@@ -8,7 +8,6 @@
 - #NOM. ALUMNO: Medina Juan Gabriel
 - #DESCRIPCION: Analisis de programa y cuestionario
 - #REVISION: [Ninguna]
-
 */
 
 #include <stdio.h>

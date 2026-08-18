@@ -8,7 +8,6 @@
 - #NOM. ALUMNO: Juan Gabriel Medina
 - #DESCRIPCION: Analisis de Codigo
 - #REVISION: [Ninguna]
-
 */
 
 #include <stdio.h>
