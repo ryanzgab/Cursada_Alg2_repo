@@ -25,7 +25,9 @@ fuentes: https://www.w3schools.com/c/index.php
 
  - [Trabajo Practico(PUNTEROS) 1](https://github.com/ryanzgab/Cursada_Alg2_repo/tree/main/AEDII/TP1)
 
+## Debug
 
+ - [C Tutor](https://pythontutor.com/c.html#mode=edit)
 ## Authors
 
 - [@ryanzgab](https://github.com/ryanzgab)
