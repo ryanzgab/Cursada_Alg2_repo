@@ -19,10 +19,10 @@ typedef Real* ApReal;
 
 /*
     a) - ¿Qué tipo de dato es ApTemperatura? ¿Y qué tipo de dato contiene?
-    R: es de tipo "Real" y contiene un dato de tipo Float.
+    R: es de tipo "Real" y contiene dato de tipo puntero.
 
     b) - ¿Qué contiene ApTemperatura justo después de declararse?
-    R: Contiene solamente su propia direccion de memoria.
+    R: Nada porque no tiene ninguna variable de tipo real a la cual referenciar.
 */
 int main()
 {
@@ -36,13 +36,36 @@ int main()
     /*
     4) :
             I. ¿Qué valor contiene ApTemperatura? 
-                R: Su propia direccion de memoria.
+                R: Al usarse el malloc hace que reserve una direccion de memoria valida  para despues apuntar a esa
+                direccion.
             II. ¿Qué valor contiene *ApTemperatura?
-                R: Ahora ademas de su direccion de memoria contiene el dato de tipo float 5.5
+                R: Ahora contiene el dato de tipo float 5.5 de la direccion de memoria anteriormente reservada
             III. ¿Qué valor contiene temperatura? 
                 R: Contiene unicamente el dato de tipo float 3.3
-            IV. ¿punteroTemperatura apunta al mismo lugar que &temperatura?
+            IV. ¿ApTemperatura apunta al mismo lugar que &temperatura?
                 R: No porque ambos tienen direcciones de memoria diferentes.
 */
 
 }
+
+/*EJEMPLO*/
+/*
+                 ApTemperatura
+                 ┌───────────┐
+                 │  0x1000   │
+                 └─────┬─────┘
+                       ↓
+                 ┌───────────┐
+                 │   -5.5    │
+                 └───────────┘
+                   memoria
+                   dinámica
+
+
+temperatura
+┌───────────┐
+│    3.3    │
+└───────────┘
+ memoria de la variable
+ 
+ */
