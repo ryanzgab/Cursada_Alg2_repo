@@ -20,14 +20,15 @@ Atte. Vallejos
 - Grafos
 - Recursividad
 
-fuentes: https://www.w3schools.com/c/index.php
 ## Trabajos Practicos
 
- - [Trabajo Practico(PUNTEROS) 1](https://github.com/ryanzgab/Cursada_Alg2_repo/tree/main/AEDII/TP1)
+ - [Trabajo Practico 1](https://github.com/ryanzgab/Cursada_Alg2_repo/tree/main/AEDII/TP1)
+ - [Trabajo Practico 2 (PARTE I)](https://github.com/ryanzgab/Cursada_Alg2_repo/tree/main/AEDII/TP2%20%5Bparte%201%5D)
 
 ## Debug
 
  - [C Tutor](https://pythontutor.com/c.html#mode=edit)
+
 ## Authors
 
 - [@ryanzgab](https://github.com/ryanzgab)
