@@ -3,6 +3,8 @@
 #include "mundo.h"
 #include "objetos.h"
 
+typedef char tString[MAX_CAR];
+/*El uso de constantes como parametros es para establecer solo lectura*/
 void buclePrincipal(const Habitacion*, Objeto*);
 void describirLugar(const Habitacion*, const Objeto*, int);
 int leerDireccion(const char*);
@@ -10,7 +12,7 @@ int leerDireccion(const char*);
 Habitacion CASA[NUM_HAB];
 Objeto OBJETOS[NUM_OBJ];
 
-int main(void)
+int main()
 {
     inicializarHabitaciones(CASA);
     inicializarObjetos(OBJETOS);
@@ -36,7 +38,7 @@ int leerDireccion(const char* texto)
 void buclePrincipal(const Habitacion* pCASA, Objeto* pOBJ)
 {
     int actual = CUARTO_PRINCIPAL;
-    char linea[MAX_CAR];
+    tString linea;
 
     describirLugar(pCASA, pOBJ, actual);
 

@@ -5,13 +5,13 @@ void inicializarHabitaciones(Habitacion* pCASA)
 {
     pCASA[CUARTO_PRINCIPAL] = (Habitacion){
         "Cuarto de invitados",
-        "Estas en un cuarto maloliente",
+        "Estas en un cuarto con montones de forros tirados",
         {SALIDA(CUARTO_SECUNDARIO), NO_SALIDA, NO_SALIDA, NO_SALIDA}
     };
     pCASA[CUARTO_SECUNDARIO] = (Habitacion){
         "Pasillo",
         "Un largo pasillo se ve unas dos puertas abarrotadas",
-        {NO_SALIDA, SALIDA(CUARTO_PRINCIPAL), BLOQUEADA(CUARTO_TERCIARIO), NO_SALIDA}
+        {NO_SALIDA, SALIDA(CUARTO_PRINCIPAL), SALIDA(CUARTO_TERCIARIO), NO_SALIDA}
     };
     pCASA[CUARTO_TERCIARIO] = (Habitacion){
         "Cocina",
