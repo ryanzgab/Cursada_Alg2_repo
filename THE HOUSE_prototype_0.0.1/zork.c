@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 #include "mundo.h"
 #include "objetos.h"
 
-typedef char tString[MAX_CAR];
 /*El uso de constantes como parametros es para establecer solo lectura*/
-void buclePrincipal(const Habitacion*, Objeto*);
-void describirLugar(const Habitacion*, const Objeto*, int);
-int leerDireccion(const char*);
+void buclePrincipal(Habitacion*, Objeto*);
+void describirLugar(Habitacion*, const Objeto*, int);
+int leerDireccion(const char*); /*No se puede utilizar el tString para modificar la linea de comando*/
+bool hayLuz(const Habitacion*, const Objeto*, int);
 
 Habitacion CASA[NUM_HAB];
 Objeto OBJETOS[NUM_OBJ];
@@ -20,10 +21,37 @@ int main()
     return 0;
 }
 
-void describirLugar(const Habitacion* pCASA, const Objeto* pOBJ, int id)
+bool hayLuz(const Habitacion* pCASA, const Objeto* pOBJ, int id)
 {
-    mostrarHabitacion(&pCASA[id]);
+    if (pCASA[id].luz)
+    {
+        return true;
+    }
+    return pOBJ[LAMPARA].ubicacion == EN_INVENTARIO
+        || pOBJ[LAMPARA].ubicacion == id;
+}
+
+void describirLugar(Habitacion* pCASA, const Objeto* pOBJ, int id)
+{
+    Habitacion* pHab = &pCASA[id];
+
+    if (!hayLuz(pCASA, pOBJ, id))
+    {
+        printf("\nEsta muy oscuro. No ves nada.\n");
+        return;
+    }
+
+    if (pHab->visitada)
+    {
+        mostrarNombre(pHab);
+    }
+    else
+    {
+        mostrarHabitacion(pHab);
+    }
+
     mostrarObjetos(pOBJ, id);
+    pHab->visitada = true;
 }
 
 int leerDireccion(const char* texto)
@@ -35,28 +63,28 @@ int leerDireccion(const char* texto)
     return -1;
 }
 
-void buclePrincipal(const Habitacion* pCASA, Objeto* pOBJ)
+void buclePrincipal(Habitacion* pCASA, Objeto* pOBJ)
 {
-    int actual = CUARTO_PRINCIPAL;
-    tString linea;
-
+    int actual = CUARTO_INVITADOS;
+    char linea[MAX_CAR];
+ 
     describirLugar(pCASA, pOBJ, actual);
-
+ 
     while (1)
     {
         printf("\n> ");
         if (fgets(linea, sizeof linea, stdin) == NULL) break;
         linea[strcspn(linea, "\n")] = '\0';
-
+ 
         if (strcmp(linea, "salir") == 0) break;
-
+ 
         int dir = leerDireccion(linea);
         if (dir < 0)
         {
             printf("No entiendo eso.\n");
             continue;
         }
-
+ 
         Salida s = pCASA[actual].salidas[dir];
         if (s.destino == SIN_SALIDA)
         {

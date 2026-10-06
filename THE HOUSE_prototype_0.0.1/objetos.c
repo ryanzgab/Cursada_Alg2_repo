@@ -7,7 +7,7 @@ void inicializarObjetos(Objeto* pOBJ)
     pOBJ[LAMPARA] = (Objeto){
         "lampara",
         "una lampara de aceite",
-        CUARTO_SECUNDARIO
+        CUARTO_COCINA
     };
 }
 
@@ -22,4 +22,3 @@ void mostrarObjetos(const Objeto* pOBJ, int idHab)
         }
     }
 }
-

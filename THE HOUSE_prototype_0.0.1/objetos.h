@@ -7,10 +7,12 @@
 
 enum idObjeto {LAMPARA, NUM_OBJ};
 
+typedef char tString[MAX_CAR]; 
+
 typedef struct
 {
-    const char* nombre;
-    const char* descripcion;
+    tString nombre;
+    tString descripcion;
     int ubicacion;
 } Objeto;
 
