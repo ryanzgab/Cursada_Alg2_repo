@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include "mapa.h"
-#include "direcciones.h"
+#include "comandos.h"
 
 /*El uso de constantes como parametros es para establecer solo lectura*/
 void inicializarMapa(Habitacion*, Objeto*);

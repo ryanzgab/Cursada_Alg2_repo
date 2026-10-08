@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 #include <stdio.h>
-#include "direcciones.h"
+#include "comandos.h"
 
 #define MAX_CAR 100
 #define SIN_SALIDA -1

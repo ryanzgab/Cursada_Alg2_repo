@@ -2,7 +2,7 @@
 
 enum Direcciones {NORTE, SUR, ESTE, OESTE, NUM_DIR}; /*0-NORTE, 1-SUR, 2-ESTE, 3-OESTE*/
 
-int leerDireccion(const char*); /*No se puede utilizar el tString para modificar la linea de comando*/
+int leerDireccion(const char*); /*lee las id de direccion con el texto*/
 
 int leerDireccion(const char* texto)
 {

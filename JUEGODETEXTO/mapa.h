@@ -64,7 +64,7 @@ void mostrarObjetos(const Objeto* pOBJ, int idHab)
     {
         if (pOBJ[i].ubicacion == idHab)
         {
-            printf("Aqui hay %s.\n", pOBJ[i].descripcion);
+            printf("Se logra ver.. %s.\n", pOBJ[i].descripcion);
         }
     }
 }
