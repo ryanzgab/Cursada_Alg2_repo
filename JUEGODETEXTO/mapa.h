@@ -1,7 +1,8 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include "propmapa.h"
+#include "habitaciones.h"
+#include "objetos.h"
 
+void describirLugar(Habitacion*, const Objeto*, int);
+bool hayLuz(const Habitacion*, const Objeto*, int);
 
 void inicializarHabitaciones(Habitacion* pCASA)
 {
@@ -45,4 +46,58 @@ void mostrarNombre(const Habitacion* pHab)
 void mostrarHabitacion(const Habitacion* pHab)
 {
     printf("\n%s\n%s\n", pHab->nombre, pHab->descripcion);
+}
+
+void inicializarObjetos(Objeto* pOBJ)
+{
+    pOBJ[LAMPARA] = (Objeto){
+        "lampara",
+        "una lampara de aceite",
+        CUARTO_COCINA
+    };
+}
+
+void mostrarObjetos(const Objeto* pOBJ, int idHab)
+{
+    int i;
+    for (i = 0; i < NUM_OBJ; i++)
+    {
+        if (pOBJ[i].ubicacion == idHab)
+        {
+            printf("Aqui hay %s.\n", pOBJ[i].descripcion);
+        }
+    }
+}
+
+void describirLugar(Habitacion* pCASA, const Objeto* pOBJ, int id)
+{
+    Habitacion* pHab = &pCASA[id];
+
+    if (!hayLuz(pCASA, pOBJ, id))
+    {
+        printf("\nEsta muy oscuro. No ves nada.\n");
+        return;
+    }
+
+    if (pHab->visitada)
+    {
+        mostrarNombre(pHab);
+    }
+    else
+    {
+        mostrarHabitacion(pHab);
+    }
+
+    mostrarObjetos(pOBJ, id);
+    pHab->visitada = true;
+}
+
+bool hayLuz(const Habitacion* pCASA, const Objeto* pOBJ, int id)
+{
+    if (pCASA[id].luz)
+    {
+        return true;
+    }
+    return pOBJ[LAMPARA].ubicacion == EN_INVENTARIO
+        || pOBJ[LAMPARA].ubicacion == id;
 }

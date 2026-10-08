@@ -1,7 +1,9 @@
-#ifndef PROPMAPA_H
-#define PROPMAPA_H
+#ifndef HABITACIONES_H
+#define HABITACIONES_H
 
 #include <stdbool.h>
+#include <stdio.h>
+#include "direcciones.h"
 
 #define MAX_CAR 100
 #define SIN_SALIDA -1
@@ -12,7 +14,6 @@
 
 typedef char tString[MAX_CAR];  /*Cadena de caracteres*/
 
-enum Direcciones {NORTE, SUR, ESTE, OESTE, NUM_DIR}; /*0-NORTE, 1-SUR, 2-ESTE, 3-OESTE*/
 enum idHabitacion /*Identificadores de  Habitaciones*/
 {
     CUARTO_INVITADOS, 
