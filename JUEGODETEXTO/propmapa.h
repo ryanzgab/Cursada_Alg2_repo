@@ -1,5 +1,5 @@
-#ifndef MUNDO_H
-#define MUNDO_H
+#ifndef PROPMAPA_H
+#define PROPMAPA_H
 
 #include <stdbool.h>
 

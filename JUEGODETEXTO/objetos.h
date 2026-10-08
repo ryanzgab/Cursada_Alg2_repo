@@ -1,22 +1,23 @@
-#ifndef OBJETOS_H
-#define OBJETOS_H
+#include "propobjetos.h"
+#include "propmapa.h"
 
-/* Valores especiales de "ubicacion" (los ids de habitacion son 0 o mayores) */
-#define EN_INVENTARIO    -2
-#define EN_NINGUNA_PARTE -3
-
-enum idObjeto {LAMPARA, NUM_OBJ};
-
-typedef char tString[MAX_CAR]; 
-
-typedef struct
+void inicializarObjetos(Objeto* pOBJ)
 {
-    tString nombre;
-    tString descripcion;
-    int ubicacion;
-} Objeto;
+    pOBJ[LAMPARA] = (Objeto){
+        "lampara",
+        "una lampara de aceite",
+        CUARTO_COCINA
+    };
+}
 
-void inicializarObjetos(Objeto*);
-void mostrarObjetos(const Objeto*, int);
-
-#endif
+void mostrarObjetos(const Objeto* pOBJ, int idHab)
+{
+    int i;
+    for (i = 0; i < NUM_OBJ; i++)
+    {
+        if (pOBJ[i].ubicacion == idHab)
+        {
+            printf("Aqui hay %s.\n", pOBJ[i].descripcion);
+        }
+    }
+}
